@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 
 namespace CharacterScript
 {
@@ -45,22 +45,22 @@ namespace CharacterScript
             float movementDirectionY = moveDirection.y;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-            if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
-            {
-                moveDirection.y = jumpSpeed;
-            }
-            else
-            {
-                moveDirection.y = movementDirectionY;
-            }
+            // if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
+            // {
+            //     moveDirection.y = jumpSpeed;
+            // }
+            // else
+            // {
+            //     moveDirection.y = movementDirectionY;
+            // }
 
             // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
             // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
             // as an acceleration (ms^-2)
-            if (!characterController.isGrounded)
-            {
-                moveDirection.y -= gravity * Time.deltaTime;
-            }
+            // if (!characterController.isGrounded)
+            // {
+            //     moveDirection.y -= gravity * Time.deltaTime;
+            // }
 
             // Move the controller
             characterController.Move(moveDirection * Time.deltaTime);
