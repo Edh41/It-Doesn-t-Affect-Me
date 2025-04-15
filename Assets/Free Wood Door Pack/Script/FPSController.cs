@@ -63,7 +63,7 @@ namespace CharacterScript
             // }
 
             // Move the controller
-            characterController.Move(moveDirection * Time.deltaTime);
+            //characterController.Move(moveDirection * Time.deltaTime);
 
             // Player and Camera rotation
             if (canMove)
