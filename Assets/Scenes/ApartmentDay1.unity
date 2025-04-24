@@ -1901,7 +1901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51af8cd84be141f459608937061a2f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: 
+  targetScene: JunkyardDay1
 --- !u!1001 &285549161
 PrefabInstance:
   m_ObjectHideFlags: 0
