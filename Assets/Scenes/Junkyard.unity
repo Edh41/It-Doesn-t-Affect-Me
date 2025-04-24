@@ -738,8 +738,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1676587433}
-  speed: 5
-  lookSpeed: 2
+  speed: 4
+  lookSpeed: 4
 --- !u!143 &80635274
 CharacterController:
   m_ObjectHideFlags: 0
