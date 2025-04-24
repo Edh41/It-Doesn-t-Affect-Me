@@ -9,7 +9,8 @@ public class SceneTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(targetScene);
+            //SceneManager.LoadScene(targetScene);
+            Debug.Log("Going to work I see");
         }
     }
     
