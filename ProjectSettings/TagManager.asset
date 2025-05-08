@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Wood Box
+  - Item
   layers:
   - Default
   - TransparentFX
