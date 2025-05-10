@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wood Box
   - Item
+  - Door
   layers:
   - Default
   - TransparentFX
