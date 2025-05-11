@@ -26,7 +26,7 @@ public class Door : MonoBehaviour {
 		{
             var target = Quaternion.Euler (0, DoorOpenAngle, 0);
             transform.localRotation = Quaternion.Slerp(transform.localRotation, target, Time.deltaTime * 5 * smooth);
-			transform.localScale = new Vector3(0.33f, 1, 1);
+			transform.localScale = new Vector3(0.4f, 1, 1);
 	
 		}
 		else
