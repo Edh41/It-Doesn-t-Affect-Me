@@ -12843,6 +12843,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactDistance: 17
+  trashPrefab: {fileID: 0}
+  valvePrefab: {fileID: 0}
+  conePrefab: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 16320
