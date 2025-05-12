@@ -1,10 +1,17 @@
 using UnityEngine;
+using System.Collections;
 
 public class TimedText : MonoBehaviour
 {
     public float displayTime = 5.0f;
     void Start()
     {
-        Destroy(this.gameObject, displayTime * Time.deltaTime);
+        StartCoroutine(DisplayRemove());
+    }
+
+    IEnumerator DisplayRemove()
+    {
+        yield return new WaitForSeconds(displayTime);
+        this.gameObject.SetActive(false);
     }
 }

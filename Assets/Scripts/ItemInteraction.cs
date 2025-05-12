@@ -30,7 +30,7 @@ public class ItemInteraction : MonoBehaviour
 
                     crowbar = true;
 
-                    Destroy(hit.collider.gameObject);
+                    hit.collider.gameObject.SetActive(false);
 
                     // Crowbar is now in inventory
                 }
@@ -43,8 +43,6 @@ public class ItemInteraction : MonoBehaviour
 
                     trashPrefab = hit.collider.gameObject;
 
-                    Instantiate(trashPrefab, new Vector3(10.0f,1.5f,127.9f), Quaternion.identity);
-
                     hit.collider.gameObject.SetActive(false);
 
                     // trash bag is now in inventory
@@ -56,7 +54,7 @@ public class ItemInteraction : MonoBehaviour
 
                     if(crowbar)
                     {
-                        Destroy(hit.collider.gameObject);
+                        hit.collider.gameObject.SetActive(false);
                     }
                     
                     if(box1)
@@ -68,6 +66,8 @@ public class ItemInteraction : MonoBehaviour
                     {
                         box1 = true;
                     }
+
+                    // opened a box
                 }
 
                 if(hit.collider.gameObject.name.Equals("TallWoodBox"))
@@ -76,7 +76,7 @@ public class ItemInteraction : MonoBehaviour
                     
                     if(crowbar)
                     {
-                        Destroy(hit.collider.gameObject);
+                        hit.collider.gameObject.SetActive(false);
                     }
                     
                     if(box1)
@@ -88,6 +88,8 @@ public class ItemInteraction : MonoBehaviour
                     {
                         box1 = true;
                     }
+
+                    // opened another box
                 }
 
                 if(hit.collider.gameObject.name.Equals("Dumpster_body"))
@@ -99,10 +101,15 @@ public class ItemInteraction : MonoBehaviour
                         trashPrefab.SetActive(true);
 
                         Instantiate(trashPrefab, new Vector3(31.4f,17.8f,-83.3f), Quaternion.identity);
+
+                        trash = false;
+
+                        trashOut = true;
+
+                        trashPrefab.SetActive(false);
                     }
-                    // if trash is true, instantiate bag into dumpster
-                    // set trash to false
-                    // set trashout to true
+                    
+                    // trash task complete
                 }
 
                 if(hit.collider.gameObject.name.Equals("Valve"))
@@ -111,9 +118,9 @@ public class ItemInteraction : MonoBehaviour
 
                     valve = true;
 
-                    // instantiate valve
+                    valvePrefab = hit.collider.gameObject;
 
-                    Destroy(hit.collider.gameObject);
+                    hit.collider.gameObject.SetActive(false);
 
                     // valve is in inventory
                 }
@@ -124,11 +131,16 @@ public class ItemInteraction : MonoBehaviour
 
                     if(valve)
                     {
+                        valvePrefab.SetActive(true);
 
+                        Instantiate(valvePrefab, new Vector3(15.48f,5.973f,87.814f), Quaternion.Euler(0.0f,0.0f,90.0f));
+
+                        valve = false;
+
+                        valvePlaced = true;
+
+                        valvePrefab.SetActive(false);
                     }
-                    // if valve is true, instantiate valve handle onto machine
-                    // set valve to false
-                    // set valveplaced to true
                 }
 
                 if(hit.collider.gameObject.name.Equals("Cone"))
@@ -137,9 +149,9 @@ public class ItemInteraction : MonoBehaviour
                     
                     cone = true;
                     
-                    // Instantiate cone
+                    conePrefab = hit.collider.gameObject;
                     
-                    Destroy(hit.collider.gameObject);
+                    hit.collider.gameObject.SetActive(false);
 
                     // cone is now in inventory
                 }
@@ -150,11 +162,16 @@ public class ItemInteraction : MonoBehaviour
                     
                     if(cone)
                     {
+                        conePrefab.SetActive(true);
 
+                        Instantiate(conePrefab, new Vector3(27.7f,0.7f,52.4f), Quaternion.identity);
+
+                        cone = false;
+
+                        conePlaced = true;
+
+                        conePrefab.SetActive(false);
                     }
-                    // if cone is true, instantiate cone on ground
-                    // set cone to false
-                    // set coneplaced to true
                 }
 
                 if(hit.collider.gameObject.name.Equals("ExitCriteria"))
@@ -163,7 +180,7 @@ public class ItemInteraction : MonoBehaviour
                     
                     if(box1 && box2 && valvePlaced && conePlaced && trashOut)
                     {
-                        Destroy(hit.collider.gameObject);
+                        hit.collider.gameObject.SetActive(false);
                     }
                     
                     // you can leave now
