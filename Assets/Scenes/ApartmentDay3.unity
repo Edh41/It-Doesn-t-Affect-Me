@@ -6527,6 +6527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 519343055}
   - component: {fileID: 519343056}
+  - component: {fileID: 519343057}
   m_Layer: 0
   m_Name: Game End
   m_TagString: Untagged
@@ -6544,7 +6545,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -95, y: 4.5, z: -12}
-  m_LocalScale: {x: 2, y: 9, z: 6}
+  m_LocalScale: {x: 10, y: 9, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1032011840}
@@ -6570,6 +6571,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &519343057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519343054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51af8cd84be141f459608937061a2f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScene: MainMenu
 --- !u!1001 &525931538
 PrefabInstance:
   m_ObjectHideFlags: 0
