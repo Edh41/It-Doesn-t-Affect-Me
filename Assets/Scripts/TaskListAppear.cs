@@ -14,6 +14,6 @@ public class TaskListAppear : MonoBehaviour
     IEnumerator AppearDelay()
     {
         yield return new WaitForSeconds(3);
-        this.gameObject.transform.localPosition = new Vector3(0.54f,0.54f,1.0f);
+        this.gameObject.transform.localPosition = new Vector3(0.0f,0.54f,1.0f);
     }
 }
